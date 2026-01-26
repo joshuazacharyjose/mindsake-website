@@ -32,8 +32,8 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-gray-900">Email</h3>
-                                            <a href="mailto:info@mindsake.in" className="text-gray-600 hover:text-primary transition-colors">
-                                                info@mindsake.in
+                                            <a href="mailto:angelin.jose00@gmail.com" className="text-gray-600 hover:text-primary transition-colors">
+                                                angelin.jose00@gmail.com
                                             </a>
                                             <p className="text-sm text-gray-400 mt-1">We typically reply within 24 hours.</p>
                                         </div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-gray-900">Phone</h3>
-                                            <p className="text-gray-600">+91 999 999 9999</p>
+                                            <p className="text-gray-600">+91 96455 10183</p>
                                             <p className="text-sm text-gray-400 mt-1">Available Mon-Fri, 10am - 6pm.</p>
                                         </div>
                                     </div>
