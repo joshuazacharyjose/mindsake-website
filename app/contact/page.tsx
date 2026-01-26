@@ -32,8 +32,8 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-gray-900">Email</h3>
-                                            <a href="mailto:angelin.jose00@gmail.com" className="text-gray-600 hover:text-primary transition-colors">
-                                                angelin.jose00@gmail.com
+                                            <a href="mailto:mindsake.co@gmail.com" className="text-gray-600 hover:text-primary transition-colors">
+                                                mindsake.co@gmail.com
                                             </a>
                                             <p className="text-sm text-gray-400 mt-1">We typically reply within 24 hours.</p>
                                         </div>
