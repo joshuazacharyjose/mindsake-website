@@ -46,7 +46,7 @@ export async function submitContactForm(prevState: ContactState, formData: FormD
         // In a real scenario, we would send the email here using Resend
         // await resend.emails.send({
         //   from: 'Mindsake <onboarding@resend.dev>',
-        //   to: 'info@mindsake.in',
+        //   to: 'mindsake.co@gmail.com',
         //   subject: `New Contact: ${subject}`,
         //   text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
         // });

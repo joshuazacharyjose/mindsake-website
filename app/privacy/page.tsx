@@ -28,7 +28,7 @@ export default function PrivacyPage() {
 
                 <h3 className="text-xl font-semibold text-secondary">4. Contact Us</h3>
                 <p>
-                    If you have any questions about this Privacy Policy, please contact us at info@mindsake.in.
+                    If you have any questions about this Privacy Policy, please contact us at mindsake.co@gmail.com.
                 </p>
             </div>
         </Container>
