@@ -14,7 +14,7 @@ export default function Home() {
         </p>
 
         <div className="flex gap-4 mb-20">
-          <Button size="lg" href="https://calendly.com" target="_blank">Book Session</Button>
+          <Button size="lg" href="https://forms.gle/a23Fe4UPjVquuAVZA" target="_blank">Book Session</Button>
           <Button variant="outline" size="lg" href="/workshops">Explore Workshops</Button>
         </div>
 

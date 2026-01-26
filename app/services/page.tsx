@@ -85,7 +85,7 @@ export default function ServicesPage() {
                         <p className="text-lg text-primary-light mb-10 max-w-xl mx-auto">
                             Taking the first step is often the hardest. We are here to support you.
                         </p>
-                        <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100" href="https://calendly.com" target="_blank">
+                        <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100" href="https://forms.gle/a23Fe4UPjVquuAVZA" target="_blank">
                             Book Your Session
                         </Button>
                     </div>

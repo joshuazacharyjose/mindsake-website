@@ -51,7 +51,7 @@ export function Navbar() {
                             {link.label}
                         </Link>
                     ))}
-                    <Button size="sm" href="https://calendly.com" target="_blank">Book Session</Button>
+                    <Button size="sm" href="https://forms.gle/a23Fe4UPjVquuAVZA" target="_blank">Book Session</Button>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -81,7 +81,7 @@ export function Navbar() {
                                 {link.label}
                             </Link>
                         ))}
-                        <Button className="w-full" href="https://calendly.com" target="_blank">Book Session</Button>
+                        <Button className="w-full" href="https://forms.gle/a23Fe4UPjVquuAVZA" target="_blank">Book Session</Button>
                     </div>
                 </div>
             )}
