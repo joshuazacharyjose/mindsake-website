@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="./mindsake.png" alt="Mindsake Logo" width="180" />
+</p>
 
-## Getting Started
+<h1 align="center">Mindsake</h1>
 
-First, run the development server:
+<p align="center">
+  <em>The mind’s matters</em>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<p align="center">
+  A calm, professional, and privacy-conscious website for a counseling psychology practice.
+</p>
+
+---
+
+## 🌿 About Mindsake
+
+**Mindsake** is a counseling psychology practice focused on creating a safe, empathetic, and non‑judgmental space for mental health support and personal growth.
+
+This repository contains the source code for the official Mindsake website.  
+The website is intentionally designed to feel **calm, trustworthy, and accessible**, reflecting the therapeutic values of the practice.
+
+---
+
+## 🧠 Services Represented
+
+The website is structured around three core offerings:
+
+### 1. Individual Therapy
+- For adolescents, youth, and adults  
+- One‑on‑one counseling sessions  
+- Focused on emotional well‑being, self‑exploration, stress, and personal growth  
+
+### 2. Group Workshops
+- Topic‑based, interest‑driven workshops  
+- Examples include:
+  - Anxiety management
+  - Stress management
+  - Self‑exploration
+  - Personal development  
+
+### 3. Psychology Content & Outreach
+- Educational psychology content shared via social media
+- Aimed at increasing awareness and mental health literacy
+
+---
+
+## 🎨 Design Philosophy
+
+This project prioritizes:
+
+- Emotional safety over visual flash
+- Simplicity over complexity
+- Trust over conversion tactics
+
+Key design principles:
+- Soft, nature‑inspired color palette
+- Minimalist layouts with generous whitespace
+- Subtle motion and micro‑interactions
+- Accessibility‑first approach (WCAG 2.1 AA)
+
+---
+
+## 🛠️ Tech Stack (High Level)
+
+- **Framework:** Next.js (React)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Content:** Headless CMS (Sanity) + Markdown
+- **Forms & Email:** Server Actions + Resend
+- **Scheduling:** Calendly (external)
+- **Analytics:** Privacy‑first analytics
+- **Hosting:** Vercel
+
+---
+
+## 🔒 Privacy & Ethics
+
+Given the mental‑health context, the project intentionally avoids:
+
+- User accounts or authentication
+- Storing therapy notes or sensitive client data
+- Tracking cookies or invasive analytics
+- Medical or diagnostic functionality
+
+---
+
+## ♿ Accessibility
+
+Accessibility is a non‑negotiable requirement:
+
+- Semantic HTML
+- Keyboard navigation
+- Screen‑reader friendly labels
+- High contrast typography
+- Respect for reduced‑motion preferences
+
+---
+
+## 📁 Repository Structure (Simplified)
+
+```
+/app
+/components
+/content
+/lib
+/public
+/styles
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contribution Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Please respect the therapeutic context when contributing.  
+Avoid aggressive UI patterns, data‑heavy features, or tracking tools.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Branding, content, and assets are proprietary to Mindsake.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+<p align="center">
+  <strong>Mindsake</strong><br/>
+  <em>Because the mind matters.</em>
+</p>
