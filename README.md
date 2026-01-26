@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./mindsake.png" alt="Mindsake Logo" width="180" />
+  <img src="/public/mindsake.png" alt="Mindsake Logo" width="180" />
 </p>
 
 <h1 align="center">Mindsake</h1>
