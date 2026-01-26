@@ -16,15 +16,15 @@ export function Footer() {
                             Creating a safe space for your mental well-being.
                         </p>
                         <div className="flex gap-4 mt-2">
-                            <Link href="#" className="text-secondary hover:text-primary transition-colors">
+                            <Link href="https://www.instagram.com/_mindsake/" target="_blank" className="text-secondary hover:text-primary transition-colors">
                                 <Instagram className="h-5 w-5" />
                                 <span className="sr-only">Instagram</span>
                             </Link>
-                            <Link href="#" className="text-secondary hover:text-primary transition-colors">
+                            <Link href="https://www.linkedin.com/in/angelin-jose/" target="_blank" className="text-secondary hover:text-primary transition-colors">
                                 <Linkedin className="h-5 w-5" />
                                 <span className="sr-only">LinkedIn</span>
                             </Link>
-                            <Link href="mailto:info@mindsake.in" className="text-secondary hover:text-primary transition-colors">
+                            <Link href="mailto:angelin.jose00@gmail.com" className="text-secondary hover:text-primary transition-colors">
                                 <Mail className="h-5 w-5" />
                                 <span className="sr-only">Email</span>
                             </Link>
