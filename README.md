@@ -5,6 +5,17 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=700&size=35&duration=5000&pause=1000&color=80B2A9&center=true&width=1050&lines=Mindsake+%7C+The+Mind's+Matters)](https://git.io/typing-svg)
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Framework-Next.js-000000?logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/UI-React-61DAFB?logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Language-TypeScript-3178C6?logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Styling-Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/CMS-Sanity-F03E2F?logo=sanity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Content-Markdown-000000?logo=markdown&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hosting-Vercel-000000?logo=vercel&logoColor=white" />
+</p>
+
+
+<p align="center">
   A calm, professional, and privacy-conscious website for a counseling psychology practice.
 </p>
 
