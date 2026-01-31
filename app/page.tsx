@@ -1,12 +1,41 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { FadeIn, Stagger, StaggerItem } from "@/lib/motion";
 import { GlassCard } from "@/components/ui/glass";
 import { motion } from "framer-motion";
 
+// Dynamic import - only loads SilkBackground on this page
+const Silk = dynamic(() => import("@/components/backgrounds/SilkBackground"), {
+  ssr: false,
+  loading: () => null,
+});
+
+// Hook to detect reduced motion preference
+function useReducedMotion(): boolean {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handler = (event: MediaQueryListEvent) => {
+      setPrefersReducedMotion(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
+  return prefersReducedMotion;
+}
+
 export default function Home() {
+  const reducedMotion = useReducedMotion();
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Layered gradient background */}
@@ -18,20 +47,77 @@ export default function Home() {
       <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-primary/8 rounded-full blur-3xl" />
 
       {/* Hero Section */}
-      <section className="relative pt-20 lg:pt-32 pb-16">
-        <Container className="flex flex-col items-center text-center">
+      <section className="relative pt-28 lg:pt-40 pb-16">
+        {/* SilkBackground - only rendered if reduced motion is not preferred */}
+        {!reducedMotion ? (
+          <div
+            className="absolute inset-0 z-0 pointer-events-none"
+            aria-hidden="true"
+          >
+            <Silk
+              speed={3}
+              scale={1.2}
+              color="#80B2A9"
+              noiseIntensity={0.8}
+              rotation={0}
+            />
+          </div>
+        ) : (
+          // Static fallback for reduced motion - subtle gradient
+          <div
+            className="absolute inset-0 z-0 bg-gradient-to-br from-primary-light/10 via-transparent to-primary/5"
+            aria-hidden="true"
+          />
+        )}
+
+        {/* Silk Dimming Overlay - reduces highlight clash */}
+        <div
+          className="absolute inset-0 z-[1] pointer-events-none bg-[#2a3f3d]/10"
+          aria-hidden="true"
+        />
+
+        <Container className="relative z-10 flex flex-col items-center text-center">
           {/* Hero glass panel with glow */}
           <FadeIn>
             <div className="relative">
               {/* Soft glow behind content */}
-              <div className="absolute inset-0 -m-8 bg-primary-light/6 rounded-3xl blur-2xl" />
+              <div className="absolute inset-0 -m-8 bg-primary-light/8 rounded-[28px] blur-2xl" />
 
-              <div className="relative glass-panel p-8 md:p-12 glow-soft">
-                <h1 className="text-4xl lg:text-6xl font-bold font-heading text-primary mb-6 tracking-tight">
+              {/* Strengthened glass panel - frosted acrylic feel */}
+              <div
+                className="relative p-8 md:p-12"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.32)',
+                  backdropFilter: 'blur(24px)',
+                  WebkitBackdropFilter: 'blur(24px)',
+                  borderRadius: '24px',
+                  border: '1px solid rgba(255, 255, 255, 0.25)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04)',
+                }}
+              >
+                {/* Headline - charcoal, grounded, confident */}
+                <h1
+                  className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading mb-6"
+                  style={{
+                    color: '#1e293b',
+                    letterSpacing: '-0.025em',
+                    lineHeight: 1.15,
+                    textShadow: '0 1px 2px rgba(255, 255, 255, 0.4)',
+                  }}
+                >
                   Find Calm in the Chaos
                 </h1>
 
-                <p className="text-xl text-secondary font-light max-w-2xl mb-10 leading-relaxed mx-auto">
+                {/* Subtext - readable, comfortable, clear */}
+                <p
+                  className="text-base md:text-lg font-medium mb-10 mx-auto"
+                  style={{
+                    color: '#475569',
+                    maxWidth: '28rem',
+                    lineHeight: 1.75,
+                    textShadow: '0 1px 1px rgba(255, 255, 255, 0.3)',
+                  }}
+                >
                   Professional, safe, and empathetic counseling psychology services for adolescents, youth, and adults.
                 </p>
 
@@ -51,6 +137,19 @@ export default function Home() {
             </div>
           </FadeIn>
         </Container>
+
+        {/* Hero fade-out transition - subtle dissolve to next section */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-[2]"
+          aria-hidden="true"
+          style={{
+            background: 'linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.95) 100%)',
+            backdropFilter: 'blur(2px)',
+            WebkitBackdropFilter: 'blur(2px)',
+            maskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
+          }}
+        />
       </section>
 
       {/* Services Section */}

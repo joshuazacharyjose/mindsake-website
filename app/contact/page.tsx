@@ -27,7 +27,7 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         {/* Contact Info */}
                         <FadeIn className="space-y-8">
-                            <div>
+                            <div className="bg-neutral-50/80 p-8 rounded-2xl border border-neutral-100">
                                 <h2 className="text-2xl font-bold font-heading text-secondary mb-6">Contact Information</h2>
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">

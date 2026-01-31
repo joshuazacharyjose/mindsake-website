@@ -32,7 +32,7 @@ export default function AboutPage() {
                         <FadeIn className="w-full lg:w-5/12">
                             <TherapistProfileCard
                                 imageSrc="/images/therapist.jpg"
-                                name="Meet the Therapist"
+                                name="Angelin Thereas Jose"
                                 title="Counseling Psychologist"
                                 credentials="M.Sc. in Counseling Psychology"
                                 highlights={[
