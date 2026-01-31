@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { FadeIn, Stagger, StaggerItem } from "@/lib/motion";
-import { motion } from "framer-motion";
+import { TherapistProfileCard } from "@/components/ui/TherapistProfileCard";
 
 export default function AboutPage() {
     return (
@@ -25,67 +24,45 @@ export default function AboutPage() {
                 </Container>
             </section>
 
-            {/* Therapist Profile Section */}
-            <section className="py-16 md:py-24">
+            {/* Therapist Profile Section - Using new Profile Card */}
+            <section className="py-16 md:py-24 bg-gradient-calm">
                 <Container>
-                    <div className="flex flex-col md:flex-row gap-12 items-center">
-                        {/* Image Column - Enhanced with glass styling */}
-                        <FadeIn className="w-full md:w-1/2 flex justify-center md:justify-end">
-                            <div className="relative">
-                                {/* Primary-light halo behind image */}
-                                <div className="absolute inset-0 -m-4 bg-primary-light/15 rounded-full blur-2xl" />
-
-                                {/* Glass container with hover effect */}
-                                <motion.div
-                                    whileHover={{
-                                        scale: 1.03,
-                                        boxShadow: "0 8px 40px rgba(128, 178, 169, 0.2), 0 0 60px rgba(164, 212, 201, 0.15)"
-                                    }}
-                                    transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] }}
-                                    className="relative glass-card p-3 rounded-full glow-soft"
-                                >
-                                    <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden">
-                                        <Image
-                                            src="/images/therapist.jpg"
-                                            alt="Therapist Profile"
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                        />
-                                    </div>
-                                </motion.div>
-                            </div>
+                    <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+                        {/* Profile Card */}
+                        <FadeIn className="w-full lg:w-5/12">
+                            <TherapistProfileCard
+                                imageSrc="/images/therapist.jpg"
+                                name="Meet the Therapist"
+                                title="Counseling Psychologist"
+                                credentials="M.Sc. in Counseling Psychology"
+                                highlights={[
+                                    "Specialized in Adolescent & Youth Counseling",
+                                    "Experience with Anxiety, Stress, and Emotional Regulation",
+                                    "Trauma-Informed Approach",
+                                    "Creating safe, validating environments"
+                                ]}
+                                quote="Therapy is not just about fixing problems — it's about understanding yourself and finding your own path to emotional balance."
+                            />
                         </FadeIn>
 
                         {/* Content Column */}
-                        <FadeIn delay={0.15} className="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left">
+                        <FadeIn delay={0.15} className="w-full lg:w-7/12 flex flex-col gap-6">
                             <div>
-                                <h2 className="text-3xl font-bold font-heading text-secondary mb-2">
-                                    Meet the Therapist
+                                <h2 className="text-3xl font-bold font-heading text-secondary mb-4">
+                                    Your Journey to Wellness
                                 </h2>
-                                <p className="text-primary font-medium text-lg">Counseling Psychologist</p>
                             </div>
 
                             <div className="space-y-4 text-gray-600 leading-relaxed">
                                 <p>
-                                    With a deep commitment to empathetic care, I work with adolescents, youth, and adults to navigate life's challenges. My approach is rooted in creating a safe, validating environment where you feel heard and understood.
+                                    With a deep commitment to empathetic care, I work with adolescents, youth, and adults to navigate life&apos;s challenges. My approach is rooted in creating a safe, validating environment where you feel heard and understood.
                                 </p>
                                 <p>
-                                    At Mindsake, we believe that therapy is not just about "fixing" problems, but about understanding yourself, building resilience, and finding your own path to emotional balance.
+                                    At Mindsake, we believe that therapy is not just about &quot;fixing&quot; problems, but about understanding yourself, building resilience, and finding your own path to emotional balance.
                                 </p>
                                 <p>
                                     Whether you are dealing with anxiety, stress, relationship issues, or simply seeking personal growth, I am here to support you on your journey.
                                 </p>
-                            </div>
-
-                            <div className="pt-4">
-                                <h3 className="text-lg font-semibold text-secondary mb-2">Qualifications & Experience</h3>
-                                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                                    <li>M.Sc. in Counseling Psychology</li>
-                                    <li>Specialized in Adolescent & Youth Counseling</li>
-                                    <li>Experience with Anxiety, Stress, and Emotional Regulation</li>
-                                    <li>Trauma-Informed Approach</li>
-                                </ul>
                             </div>
                         </FadeIn>
                     </div>

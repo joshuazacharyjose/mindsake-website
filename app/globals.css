@@ -244,3 +244,11 @@ select:focus {
     var(--glass-shadow-sm),
     0 0 20px var(--glass-primary-glow);
 }
+
+/* ----------------------------------------
+   3D Transform Utilities
+   ---------------------------------------- */
+
+.perspective-1000 {
+  perspective: 1000px;
+}
